@@ -2,16 +2,16 @@ import java.util.*;
 
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
+        LinkedList<Character> list = new LinkedList<>();
         String str = "madam";
-        Deque<Character> dq = new LinkedList<>();
 
         for(char c : str.toCharArray()) {
-            dq.add(c);
+            list.add(c);
         }
 
         boolean flag = true;
-        while(dq.size() > 1) {
-            if(dq.removeFirst() != dq.removeLast()) {
+        while(list.size() > 1) {
+            if(list.removeFirst() != list.removeLast()) {
                 flag = false;
                 break;
             }
