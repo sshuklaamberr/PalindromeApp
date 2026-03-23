@@ -1,13 +1,19 @@
+class PalindromeService {
+
+    boolean check(String str) {
+        String rev = new StringBuilder(str).reverse().toString();
+        return str.equals(rev);
+    }
+}
+
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
-        String str = "Madam In Eden Im Adam";
+        PalindromeService service = new PalindromeService();
 
-        str = str.replaceAll(" ", "").toLowerCase();
-
-        String rev = new StringBuilder(str).reverse().toString();
+        String str = "madam";
 
         System.out.println(
-            str.equals(rev) ? "Palindrome" : "Not Palindrome"
+            service.check(str) ? "Palindrome" : "Not Palindrome"
         );
     }
 }
